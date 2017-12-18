@@ -3,8 +3,6 @@ package com.synixia.projectbackend.daoimpl;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,7 +18,7 @@ import com.synixia.projectbackend.dto.User;
 @Repository("userDAO")
 @Transactional
 public class UserDAOImpl implements UserDAO {
-	private static final Logger log = LoggerFactory.getLogger(UserDAOImpl.class);
+	//	private static final Logger log = LoggerFactory.getLogger(UserDAOImpl.class);
 
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -48,7 +46,7 @@ public class UserDAOImpl implements UserDAO {
 					.getCurrentSession()
 						.createQuery("FROM User" , User.class)
 							.getResultList();
-		
+		//
 	}
 
 
